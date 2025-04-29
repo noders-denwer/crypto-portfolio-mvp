@@ -25,8 +25,10 @@ print("📡 Sending request...")
 try:
     response = requests.get(full_url)
     print("✅ Response received!")
-    print(response.json())
+
+    print("Raw response text:")
+    print(response.text)
+
 except Exception as e:
     print("❌ Request failed:")
     print(str(e))
-
